@@ -12,5 +12,10 @@ class Service extends Model
         'name',
         'description',
         'image',
+        'hotel_id',
     ];
+
+    public function hotel(){
+        return $this->belongsTo(Hotel::class);
+    }
 }

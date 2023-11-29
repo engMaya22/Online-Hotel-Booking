@@ -14,9 +14,11 @@ class Room extends Model
         'cover_image',
         'number_of_beds',
         'number_of_baths',
+        'hotel_id',
     ];
-    public function services(){
-        return $this->hasMany(Service::class);
+ 
+    public function hotel(){
+        return $this->belongsTo(Hotel::class);
     }
 
 }
